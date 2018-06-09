@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+body{
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	
+	background-attachment: fixed;
+	
+	background-image: linear-gradient(-45deg, #E6E6E6 25%, #E2E2E2 25%, #E2E2E2 50%, #E6E6E6 50%, #E6E6E6 75%, #E2E2E2 75%, #E2E2E2);
+	background-size: 60px 60px;
+	color: #0C0C0C;
+	
+	margin: 0px;
+	width: 100%;
+}
+
+.canvas-area{
+	display: block;
+	box-shadow: 0px 0px 10px 10px #CACACA;
+	background: #FCAE13;
+}
+
+.canvas-area-container{
+	width: 100%;
+}
+
+.logo-image{
+	opacity: 0.93;
+	width: 800px;
+}
+
+.logo-image-container{
+	text-align: center;
+	position: relative;
+		
+	bottom: 140px;
+}
+
+.info-contents{
+	position: relative;
+	bottom: 180px;
+	width: 100%;
+	
+	text-shadow: 0px 0px 5px #FFF;
+	background: #DADADA;
+}
+
+.info-text{
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	
+	color: #F81D38;
+}
+
+.count-result{
+	margin: auto;
+	text-shadow: 0px 0px 20px #AAA;
+}
+
+.count-result-container{
+	font-weight: bold;
+	
+	background: #E0E0E0;
+	color: #232323;
+	text-align: center;
+	font-size: 90px;
+	height: 285px;
+	
+	margin: -150px 0px -5px 0px;
+	box-shadow: 0px 0px 15px 10px #CACACA;
+	
+	list-style: none;
+}
+
+.count-sub{
+	font-size: 55px;
+	
+	position: relative;
+	bottom: 20px;
+}
+
+.count-button{
+	font-weight: bold;
+	font-size: 60px;
+	height: 100px;
+	width: 200px;
+	
+	display: inline-block;
+	text-decoration: none;
+	padding: 7px 0px 7px 0px;
+	
+	background: #FAFAFA;
+	border: solid 2px #FF9A00;
+	border-radius: 3px;
+	color: #FF9A00;
+	
+	position: relative;
+	bottom: 20px;
+	
+	transition: .3s;
+}
+
+.count-button:hover{
+	cursor: pointer;
+	background: #FF9A00;
+	color: #FAFAFA;
+}
+
+.count-button-container,.label-container{
+	text-align: center;
+	position: relative;
+	top: 50px;
+}
+
+.label-container{
+	top: 40px;
+}
+
+.label-text{
+	position: relative;
+	top: .2em;
+	
+	font-size: 20px;
+}
+
+.footer-container{
+	background: #CDCDCD;
+	height: 30px;
+	width: 100%;
+	
+	position: absolute;
+	bottom: -680px;
+	
+	text-align: center;
+	display: table;
+	
+	color: #1B1B1B;
+	font-size: 15px;
+	font-family: Lautha;
+}
+
+.footer-text{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.twitter-container{
+	text-align: center;
+	position: relative;
+	top: 38px;
+}
+
+.ad-container{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.hashtag{
+	color: #05A6FF;
+}
+
+.orange{
+	color: #EDBA07;
+}
+
+.underline{
+	text-decoration: underline;
+}

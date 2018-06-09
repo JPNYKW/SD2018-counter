@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>入場者数カウンター</title>
+	
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script src="javascript/class.js"></script>
+	<script src="javascript/main.js"></script>
+</head>
+
+<body>
+	<div class="canvas-area-container">
+		<canvas class="canvas-area"></canvas>
+	</div>
+	
+	<div class="main-contents">
+		<div class="logo-image-container">			
+			<img src="image/ScratchDayLogo.77ea6ab67942/Scratch Day Logo/For Screen_Web/PNGs/scratch-day-logo-lg.png" class="logo-image" alt="Scratch Day">
+		</div>
+		
+		<div class="info-contents">
+			<div class="info-text">来場者のデータを集計しています！投票ご協力お願いします！</div>
+		</div>
+
+		<div class="count-result-container">
+			<li>
+				<ul class="count-result">来場者数:0人</ul>
+				<ul class="count-result count-sub">子供:0人</ul>
+				<ul class="count-result count-sub">大人:0人</ul>
+			</li>
+		</div>
+
+		<div class="count-button-container">
+			<button class="count-button" onClick="increment(0)">子供</button>
+			<button class="count-button" onClick="increment(1)">大人</button>
+		</div>
+
+		<div class="label-container">
+			<div class="label-text">&#x2660;満20歳未満の方は子供を選択してください</div>
+		</div>
+		
+		<div class="twitter-container">
+			<p class="ad-container">ハッシュタグ <span class="hashtag">#SD2018Tokyo</span> で拡散をお願いします！</p>
+			<a class="twitter-timeline"  href="https://twitter.com/search?q=SD2018Tokyo" data-widget-id="995198240860520448">SD2018Tokyoに関するツイート</a>
+        	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+		
+		<div class="footer-container">
+			<div class="footer-text">Copyright &#xA9; 2018 Scratcher - youkaiwatch</div>
+		</div>
+	</div>
+</body>
+</html>
