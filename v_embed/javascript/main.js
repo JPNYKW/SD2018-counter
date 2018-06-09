@@ -16,7 +16,11 @@ function init(){
 	};
 	
 	font = {		
-		data: ['3_1-1_1-1_2-3_2-3_3-1_3-split-7_1-5_1-5_3-7_3-split-9_3-9_1-11_1-11_2-9_2-split-9_2-11_3-split-13_3-13_1-15_1-15_3-15_2-13_2-split-17_1-19_1-18_1-18_3-split-23_1-21_1-21_3-23_3-split-25_1-25_3-25_2-27_2-27_1-27_3-split-25_1-25_3-25_2-27_2-27_1-27_3','1_1-1_3-2_3-3_2-2_1-1_1-split-5_3-5_1-7_1-7_3-7_2-5_2-split-9_1-10_2-10_3-10_2-11_1-split-13_1-15_1-15_2-13_2-13_3-15_3-split-17_1-17_3-19_3-19_1-17_1-split-17_1-19_3-split-21_1-22_1-22_3-21_3-23_3-split-27_1-25_1-25_2-27_2-27_3-25_3-25_2-27_2-27_1-split'],
+		data: [
+			'3_1-1_1-1_2-3_2-3_3-1_3-split-7_1-5_1-5_3-7_3-split-9_3-9_1-11_1-11_2-9_2-split-9_2-11_3-split-13_3-13_1-15_1-15_3-15_2-13_2-split-17_1-19_1-18_1-18_3-split-23_1-21_1-21_3-23_3-split-25_1-25_3-25_2-27_2-27_1-27_3-split-25_1-25_3-25_2-27_2-27_1-27_3',
+			
+			'1_1-1_3-2_3-3_2-2_1-1_1-split-5_3-5_1-7_1-7_3-7_2-5_2-split-9_1-10_2-10_3-10_2-11_1-split-13_1-15_1-15_2-13_2-13_3-15_3-split-17_1-17_3-19_3-19_1-17_1-split-17_1-19_3-split-21_1-22_1-22_3-21_3-23_3-split-27_1-25_1-25_2-27_2-27_3-25_3-25_2-27_2-27_1-split'
+		],
 		
 		dx: 2,
 		dy: 0,
@@ -50,28 +54,34 @@ function init(){
 	init_draw_objects();
 	create_events();
 
-	scratch_cat = new Sprite({
-		saveX: -20,
-		
-		x: -20,
-		y: -50,
-		dir: 0,
-		
-		dx: 1.3,
-		dy: 3.1,
-		dDir: 3,
-		
-		width: 100,
-		height: 100,
-		
-		type: 1,
-		src: 'image/ScratchCat.394631e812be/Scratch Cat/For Screen_Web/SVG/scratch-cat.svg',
-		
-		context
-	});
+	scratch_cat = [];
+	for(var y_count = 0; y_count < 2; y_count++){
+		for(var x_count = 0; x_count < 12; x_count++){
+			scratch_cat.push(new Sprite({
+				saveX: -20 + width / 12 * x_count,
+
+				x: -20 + width / 12 * x_count,
+				y: -50 - y_count * 100,
+				dir: 0,
+
+				dx: 1.3,
+				dy: 3,
+				dDir : (y_count + 1) % 2 ? 3 : -3,
+
+				width: 100,
+				height: 100,
+
+				type: 1,
+				src:'image/ScratchCat.394631e812be/Scratch Cat/For Screen_Web/SVG/scratch-cat.svg',
+
+				context
+			}));
+		}
+	}
 	
 	tick = 220;
 	ready = true;
+	
 	snap = new Audio();
 	snap.src = 'snap.wav';
 }
@@ -125,12 +135,9 @@ function draw(){
 	
 	context.globalAlpha = 1;
 	
-	for(var y_count = 0; y_count < 2; y_count++){
-		for(var x_count = 0; x_count < 12; x_count++){
-			scratch_cat.draw(width / 12 * x_count, y_count * 100, (y_count + 1) % 2 ? 180 : 0);
-		}
-	}
-	scratch_cat.update();
+	scratch_cat.map(element => {
+		element.draw();
+	});
 	
 	context.beginPath();
 	context.globalAlpha = Math.abs(1 - Math.sin((tick * 0.9) * Math.PI / 180));
