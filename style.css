@@ -23,30 +23,6 @@ a:hover{
 	color: #FFD878;
 }
 
-.text{
-	position: relative;
-	font-size: 40px;
-	top: 50px;
-	
-	font-weight: bold;
-}
-
-.logo-container{
-	box-shadow: 7px 2px 7px 6px #CCC;
-}
-
-.logo-content{
-	font-size: 60px;
-	
-	width: 100%;
-	background: #F6F6F6;
-	
-	position: relative;
-	top: -5px;
-	
-	text-shadow: 5px 2px 7px #B5B5B5;
-}
-
 .link-container{
 	font-size: 60px;
 	font-family: Latha;
@@ -54,9 +30,4 @@ a:hover{
 
 .link-content{
 	margin: 100px 0px 100px 0px;
-}
-
-.orange{
-	text-shadow: 5px 2px 7px #D3D3D3;
-	color: #FFC638;
 }
